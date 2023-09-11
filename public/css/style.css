@@ -1,4 +1,35 @@
+*{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  
+  margin: 0;
+  padding: 0;
+}
+
 .titulo_home {
   display: block;
-  margin: auto;
-  text-align: center; }
+  margin: 20px auto;
+  text-align: center; 
+}
+
+.link_button_ingresar{
+  display: block;
+  margin: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button_ingresar {
+  color: white;
+  background-color: rgb(4, 114, 72);
+  padding: 30px;
+  font-size: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+  border: none;
+}
+.button_ingresar:hover {
+  background-color: rgb(8, 166, 105);
+  transform:scale(1.1,1.1);
+  cursor: pointer;
+}
