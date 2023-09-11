@@ -13,7 +13,7 @@ class Abilities(models.Model) :
     def __str__(self):
         return self.ability
 
-class Empleado(models.Model) :
+class Employee(models.Model) :
     JOB_CHOICES = (
         ('0', 'Contador'),
         ('1', 'Administrativo'),
