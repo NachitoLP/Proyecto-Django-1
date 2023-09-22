@@ -1,7 +1,7 @@
 {
   "name": "empleados",
   "version": "1.0.0",
-  "description": "",
+  "description": "<h2>Bienvenido a mi proyecto de Back-Office en Django</h2>\r <p style=\"text-align: justify;\">Consta de un aplicativo web creado por el framework Django, y el lenguaje de programación Python.</p>\r <p style=\"text-align: justify;\">Esto es simplemente un proyecto realizado para el Instituto Superior Nuestra Señora de la Paz. No está realizado con fines de lucro, simplemente de aprendizaje y como muestra de mi trabajo.</a></p>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
