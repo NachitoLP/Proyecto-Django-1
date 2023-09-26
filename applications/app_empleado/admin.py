@@ -7,7 +7,6 @@ from reportlab.pdfgen import canvas
 
 from ckeditor.widgets import CKEditorWidget
 
-from datetime import date
 import csv
 
 from .models import Employee, Abilities
