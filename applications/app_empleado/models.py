@@ -16,22 +16,26 @@ class Abilities(models.Model) :
     def __str__(self):
         return self.ability
 
+class Jobs(models.Model) :
+    job = models.CharField('Puesto', max_length = 50)
+
+    class Meta:
+        ordering = ['job']
+        verbose_name = 'Puesto'
+        verbose_name_plural = 'Puestos'
+        
+    def __str__(self):
+        return self.job
+
 class Employee(models.Model) :
-    JOB_CHOICES = (
-        ('0', 'Contador'),
-        ('1', 'Administrativo'),
-        ('2', 'Desarrollador'),
-        ('3', 'Analista Funcional'),
-        ('4', 'Otro')
-    )
     
     first_name = models.CharField('Nombre', max_length=20)
     last_name = models.CharField('Apellido', max_length=20)
     birth_date = models.DateField('Fecha de nacimiento', default='1970-1-1')
-    job = models.CharField('Puesto', max_length=1, choices=JOB_CHOICES)
-    department = models.ForeignKey(Departamento, on_delete=models.CASCADE)
-    abilities = models.ManyToManyField(Abilities)
-    observations = RichTextField(default='')
+    job = models.ForeignKey(Jobs, on_delete=models.CASCADE , verbose_name='Puesto')
+    department = models.ForeignKey(Departamento, on_delete=models.CASCADE, verbose_name='Departamento')
+    abilities = models.ManyToManyField(Abilities, verbose_name='Habilidades')
+    observations = RichTextField('Observaciones',default='', blank=True)
     
     def calculateAge(self) :
         today = date.today()

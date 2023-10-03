@@ -2,18 +2,19 @@ from django.contrib import admin
 from django.http import HttpResponse
 from django.db import models
 
+from ckeditor.widgets import CKEditorWidget
+
 from reportlab.lib.pagesizes import letter, A4
 from reportlab.pdfgen import canvas
 
-from ckeditor.widgets import CKEditorWidget
-
 import csv
 
-from .models import Employee, Abilities
+from .models import Employee, Abilities, Jobs
 
 # Register your models here.
 
 admin.site.register(Abilities)
+admin.site.register(Jobs)
 
 class EmpleadoAdmin(admin.ModelAdmin):
     list_display = (
@@ -29,7 +30,6 @@ class EmpleadoAdmin(admin.ModelAdmin):
     )
     list_filter = (
         'department',
-        'job'
     )
     formfield_overrides = {
         models.TextField: {'widget':CKEditorWidget()},
