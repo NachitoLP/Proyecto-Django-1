@@ -13,5 +13,5 @@ class Departamento (models.Model) :
         unique_together = ['name','short_name']
         
     def __str__ (self) :
-        return "Nombre: " + self.name + ' - ' + "Piso: " + self.floor + ' - ' + "Oficina: " + self.office
+        return self.name
 
